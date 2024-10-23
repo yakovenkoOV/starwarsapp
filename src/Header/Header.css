@@ -1,10 +1,68 @@
+:root {
+  --color-dark-side: #b12424;
+  --color-light-side: #0ff;
+}
 .header {
-  background-color: gray;
+  background-color: rgb(92, 89, 89);
   height: 7vh;
   position: sticky;
   top: 0;
   background-image: url("/public/headerSW.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 2vh;
   background-size: 5%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header-border-light {
+  border-bottom: 2px solid black;
+  box-shadow: 0 8px 15px var(--color-light-side);
+}
+.header-border-dark {
+  border-bottom: 2px solid black;
+  box-shadow: 0 8px 15px var(--color-dark-side);
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+  .header {
+    background-size: 15%;
+  }
+}
+
+/* Таблетки (от 481px до 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header {
+    background-size: 12%;
+  }
+}
+
+/* Маленькие ноутбуки (от 769px до 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    background-size: 10%;
+  }
+}
+
+/* Ноутбуки и настольные ПК (от 1025px до 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .header {
+    background-size: 8%;
+  }
+}
+
+/* Большие экраны (от 1281px до 1440px) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .header {
+    background-size: 6%;
+  }
+}
+
+/* Очень большие экраны (от 1441px и выше) */
+@media (min-width: 1441px) {
+  .header {
+    background-size: 5%;
+  }
 }
