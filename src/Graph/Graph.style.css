@@ -1,0 +1,25 @@
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.graph-button {
+  background-color: rgba(43, 42, 42, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 150px;
+  font-size: 100%;
+  margin-top: 10px;
+}
+
+.graph-button:hover {
+  background-color: rgba(92, 89, 89, 0.8);
+  transform: scale(1.05);
+}

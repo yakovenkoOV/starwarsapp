@@ -44,4 +44,6 @@
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background-image: url("/public/main-back.jpeg");
+  color: white;
 }

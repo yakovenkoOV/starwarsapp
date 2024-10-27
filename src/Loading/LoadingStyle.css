@@ -1,6 +1,6 @@
 .loading {
   height: 200px;
-  background-image: url("/public/icons8-loading-90.png");
+  background-image: url("/public/loading.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

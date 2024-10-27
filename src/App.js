@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1>Star Wars Graph</h1>
       <Heroes></Heroes>
     </div>
   );

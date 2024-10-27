@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { getHeroes } from "../Services/GetHeroes";
 import LoadingSpinner from "../Loading/LoadingSpinner";
+import HeroCards from "../HeroCards/HeroCards";
+import Graph from "../Graph/Graph";
+import "./HeroesStyle.css";
 
 export default function Heroes() {
   const [page, setPage] = useState(1);
   const [heroes, setHeroes] = useState([]);
   const [heroOnPage, setHeroesOnPage] = useState(3);
   const [loading, setLoading] = useState(true);
+  const [showGraph, setShowGraph] = useState({
+    show: false,
+    id: 0,
+  });
+
   const loadMore = () => {
     setPage((prevPage) => prevPage + 1);
     setHeroesOnPage((prevPage) => prevPage + 1);
@@ -35,8 +43,6 @@ export default function Heroes() {
             console.log(`Герой "${fetchedHero.name}" уже существует.`);
             return prevHeroes;
           });
-
-          console.log(heroes);
         } catch (error) {
           console.error("Error fetching data:", error);
         } finally {
@@ -48,30 +54,31 @@ export default function Heroes() {
     };
     fetchHeroes();
   }, [page]);
-  console.log(loading);
 
   return (
     <div>
       {loading === true ? (
         <LoadingSpinner />
+      ) : showGraph.show === true ? (
+        <Graph
+          heroes={heroes}
+          setShowGraph={setShowGraph}
+          showGraph={showGraph}
+        />
       ) : (
-        <div>
-          Heroes
+        <div className="heroes-container">
+          <h1>Heroes</h1>
           {page > 1 ? (
-            <button onClick={loadLess}>Завантажити меньше</button>
+            <button className="scroll-button" onClick={loadLess}>
+              Step back...
+            </button>
           ) : (
             <></>
           )}
-          {heroes.map((hero) => (
-            <div className="list" key={hero.id}>
-              <p>{hero.name}</p>
-              <img
-                src={`https://starwars-visualguide.com/assets/img/characters/${hero.id}.jpg`}
-                alt={hero.name}
-              ></img>
-            </div>
-          ))}
-          <button onClick={loadMore}>Завантажити більше</button>
+          <HeroCards heroes={heroes} setShowGraph={setShowGraph} />
+          <button className="scroll-button" onClick={loadMore}>
+            Load more...
+          </button>
         </div>
       )}
     </div>

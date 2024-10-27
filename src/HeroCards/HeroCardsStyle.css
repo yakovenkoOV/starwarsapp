@@ -1,0 +1,55 @@
+.hero-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  padding: 30px;
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+  .hero-card-container {
+    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Таблетки (от 481px до 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-card-container {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Маленькие ноутбуки (от 769px до 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-card-container {
+    grid-template-columns: 1fr;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Ноутбуки и настольные ПК (от 1025px до 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .hero-card-container {
+    grid-template-columns: 1fr;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Большие экраны (от 1281px до 1440px) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+}
+
+/* Очень большие экраны (от 1441px и выше) */
+@media (min-width: 1441px) {
+}

@@ -1,0 +1,24 @@
+.scroll-button {
+  background-color: rgba(43, 42, 42, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 150px;
+  font-size: 100%;
+}
+
+.scroll-button:hover {
+  background-color: rgba(92, 89, 89, 0.8);
+  transform: scale(1.05);
+}
+
+h1 {
+  margin-top: 6vh;
+}
+
+.heroes-container {
+  padding-bottom: 20px;
+}
