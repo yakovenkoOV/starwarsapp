@@ -115,8 +115,8 @@ const Graph = ({ heroes = [], setShowGraph, showGraph }) => {
       <p>Graph</p>
       <div style={{ height: 600, width: "100%" }}>
         <ReactFlow
-          nodes={nodes}
-          edges={edges}
+          nodes={layoutedElements.nodes}
+          edges={layoutedElements.edges}
           nodeTypes={nodeTypes}
           nodesDraggable={false}
           nodesConnectable={false}
