@@ -22,3 +22,12 @@ h1 {
 .heroes-container {
   padding-bottom: 20px;
 }
+
+@media (max-width: 480px) {
+  .scroll-button-header {
+    margin-bottom: 20px;
+  }
+  .scroll-button-footer {
+    margin-top: 20px;
+  }
+}

@@ -69,14 +69,20 @@ export default function Heroes() {
         <div className="heroes-container">
           <h1>Heroes</h1>
           {page > 1 ? (
-            <button className="scroll-button" onClick={loadLess}>
+            <button
+              className="scroll-button scroll-button-header "
+              onClick={loadLess}
+            >
               Step back...
             </button>
           ) : (
             <></>
           )}
           <HeroCards heroes={heroes} setShowGraph={setShowGraph} />
-          <button className="scroll-button" onClick={loadMore}>
+          <button
+            className="scroll-button scroll-button-footer"
+            onClick={loadMore}
+          >
             Load more...
           </button>
         </div>
