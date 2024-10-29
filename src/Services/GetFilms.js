@@ -1,4 +1,5 @@
-import axios from "axios";
+// import axios from "axios";
+import { default as axios } from "axios";
 
 const api = "https://sw-api.starnavi.io/films";
 
